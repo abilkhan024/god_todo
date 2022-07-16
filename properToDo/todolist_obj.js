@@ -60,9 +60,9 @@ class Todolist {
   }
   
   class Task {
-    constructor(text) {
+    constructor(description) {
       this.id = Task.generateRandomId()
-      this.text = text
+      this.description = description
       this.createdAt = Date.now()
       this.completedAt = null
   

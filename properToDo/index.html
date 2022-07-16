@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proper To-do</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app">
     <h1>
         To-Do
     </h1>
@@ -15,22 +17,8 @@
         <button onclick="add()">Add</button>
     </div>
     <ul>
-        <li class="task" data-id="${uniqueId}">
-            <span>
-                Description
-            </span>
-            <span>
-                Time Creaeted
-            </span>
-            <span>
-                Time completed
-            </span>
-            <button>Complete</button>
-            <button>Uncomplete</button>
-            <button>Remove</button>
-        </li>
     </ul>
-
+    </div>
     <script src="todolist_obj.js"></script>
     <script src="dom_obj.js"></script>
     <script src="script.js"></script>
