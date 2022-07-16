@@ -26,9 +26,9 @@ class DOM {
     }
 
     createControlBtns(task){
-        const completeBtn = this.createButton('☑', 'complete_btn', complete(task))
-        const uncompleteBtn = this.createButton('↶', 'uncomplete_btn', uncomplete(task))
-        const removeBtn = this.createButton('🗑️', 'remove_btn', remove(task))
+        const completeBtn = this.createButton('☑', 'control_btn', complete(task))
+        const uncompleteBtn = this.createButton('↶', 'control_btn', uncomplete(task))
+        const removeBtn = this.createButton('🗑', 'control_btn', remove(task))
         return [completeBtn, uncompleteBtn, removeBtn]
     }
 
