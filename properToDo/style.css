@@ -30,6 +30,10 @@ li{
     text-decoration: line-through;
 }
 
+.description{
+    overflow: auto;
+}
+
 .task > span{
     width: 120px;
 }
