@@ -9,6 +9,7 @@ function addOnEnter(event){
 
 function add(){
     const input = document.getElementsByTagName('input')[0]
+    if (!input.value) return
     todoList.add(input.value)
     dom.addElementToList(todoList.tasks)
     input.value = ''
