@@ -63,3 +63,7 @@ button:hover{
     display: flex;
     justify-content: space-around;
 }
+
+.control_btn {
+    cursor: pointer;
+}
