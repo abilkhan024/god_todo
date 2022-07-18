@@ -19,7 +19,7 @@ function complete(task){
     return () => {
         if(task.completedAt !== null) return
         todoList.complete(task.id)
-        console.log(dom.toggle(task))
+        dom.toggle(task)
     }
 }
 
@@ -27,13 +27,13 @@ function uncomplete(task){
     return () => {
         if(task.completedAt === null) return
         todoList.uncomplete(task.id)
-        console.log(dom.toggle(task))
+        dom.toggle(task)
     }
 }
 
 function remove(task){
     return () => {
         todoList.remove(task.id)
-        console.log(dom.remove(task))
+        dom.remove(task)
     }
 }
