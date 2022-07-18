@@ -21,6 +21,7 @@ li{
 }
 
 .task{
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,6 +29,11 @@ li{
 
 .completed .description{
     text-decoration: line-through;
+}
+
+.completed{
+    background-color: rgb(124, 191, 204);
+    border-radius: 10px;
 }
 
 .description{
