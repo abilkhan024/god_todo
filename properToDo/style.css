@@ -27,15 +27,6 @@ li{
     align-items: center;
 }
 
-.completed .description{
-    text-decoration: line-through;
-}
-
-.completed{
-    background-color: rgb(124, 191, 204);
-    border-radius: 10px;
-}
-
 .description{
     overflow: auto;
 }

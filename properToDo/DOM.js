@@ -1,9 +1,20 @@
 class DOM {
     
-    createHTMLElement(tag, className = '', innerTxt = ''){
+    // getTasksInLocalStorage(){
+    //     const tasksInLocalStorage = []
+    //     for(let i = 0; i < window.localStorage.length; i++){
+    //         let task = window.localStorage.getItem(`${i}`)
+    //         task = JSON.parse(task)
+    //         tasksInLocalStorage.push(task)
+    //     }
+    //     return tasksInLocalStorage
+    // }
+
+    createHTMLElement(tag, className = '', innerTxt = '', onclickFn = null){
         const element = document.createElement(tag)
         element.classList.add(className)
         element.innerText = innerTxt
+        element.onclick = onclickFn
         return element
     }
     
@@ -19,16 +30,10 @@ class DOM {
         return [descriptionSpan, createdTimeSpan, completedTimeSpan]
     }
 
-    createButton(innerTxt, className, onclickFn = null){
-        const button = this.createHTMLElement('button', className, innerTxt)
-        button.onclick = onclickFn
-        return button
-    }
-
     createControlBtns(task){
-        const completeBtn = this.createButton('☑', 'control_btn', complete(task))
-        const uncompleteBtn = this.createButton('↶', 'control_btn', uncomplete(task))
-        const removeBtn = this.createButton('🗑', 'control_btn', remove(task))
+        const completeBtn = this.createHTMLElement('button', 'control_btn', '☑', complete(task))
+        const uncompleteBtn = this.createHTMLElement('button', 'control_btn', '↶', uncomplete(task))
+        const removeBtn = this.createHTMLElement('button', 'control_btn', '🗑', remove(task))
         return [completeBtn, uncompleteBtn, removeBtn]
     }
 
@@ -57,7 +62,6 @@ class DOM {
         const listElement = this.getElementById(task.id)
         const completed_time = listElement.children[2] // child [2] is completion time span
         completed_time.textContent = todoList.formatDate(task.completedAt)
-        listElement.classList.toggle('completed')
         return listElement
     }
 

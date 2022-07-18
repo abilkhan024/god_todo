@@ -1,6 +1,5 @@
 class Todolist {
-    constructor(title) {
-      this.title = title
+    constructor() {
       this.tasks = []
       this.taskIds = []
       this.sortAsc = true;
